@@ -22,18 +22,16 @@
 </head>
 <body>
     <h1>Nuove uscite Netflix</h1>
-    <ul>
-        <?php foreach($movies as $movie) { ?>
-            <li>
-                <h3>Titolo: <?= $movie->title; ?></h3>
-                <span>Regista: <?= $movie->director; ?></span> <br>
-                <span>Genere: <?= $movie->genre; ?></span> <br>
-                <span>Durata: <?= $movie->duration; ?></span> <br>
-                <span>Anno: <?= $movie->year; ?></span> <br>
-                <div>Valutazione: <?= $movie->getStars($movie->stars); ?></div>
-                <hr>
-            </li>
-        <?php } ?>
-    </ul>
+    <?php foreach($movies as $movie) { ?>
+        <div>
+            <h3><?= $movie->title; ?></h3>
+            <span>Regista: <?= $movie->director; ?></span> <br>
+            <span>Genere: <?= $movie->genre; ?></span> <br>
+            <span>Durata: <?= $movie->duration; ?></span> <br>
+            <span>Anno: <?= $movie->year; ?></span> <br>
+            <div>Valutazione: <?= $movie->getStars($movie->stars); ?></div>
+            <hr>
+        </div>
+    <?php } ?>
 </body>
 </html>

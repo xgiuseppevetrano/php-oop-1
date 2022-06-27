@@ -6,7 +6,7 @@
         public $duration;
         public $year;
         public $stars;
-        private $htmlStar;
+        private $htmlStars;
 
         public function __construct($_title, $_director, $_genre, $_duration, $_year, $_stars) {
             $this->title = $_title;
@@ -19,7 +19,7 @@
 
         public function getStars($stars) {
             for ($i=0; $i < $stars; $i++) {
-                $this->htmlStars += "<span><i class='fa-solid fa-star'></i></span>";
+                $this->htmlStars .= "<span><i class='fa-solid fa-star'></i></span>";
             }
             return $this->htmlStars;
         }
