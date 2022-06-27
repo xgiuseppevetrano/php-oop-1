@@ -20,6 +20,7 @@
             for ($i=0; $i < $star; $i++) {
                 $this->stars += "<span><i class='fa-solid fa-star'></i></span>";
             }
+            return $this->stars;
         }
     }
 ?>
