@@ -2,11 +2,11 @@
     require_once __DIR__ . '/classes/movies.php';
 
     $movies = [
-        new Movie('The Man From Toronto', 'Patrick Hughes', 'Film d\'azione', 112, 2022),
-        new Movie('Love & Gelato', 'Brandon Camp', 'Film per adolescenti', 112, 2022),
-        new Movie('Mortal Kombat', 'Simon McQuoid', 'Film di arte marziali', 110, 2021),
-        new Movie('Hustle', 'Jeremiah Zagar', 'Dramma', 118, 2022),
-        new Movie('Spiderhead', 'Joseph Kosinski', 'Film di fantascienza', 107, 2022)
+        new Movie('The Man From Toronto', 'Patrick Hughes', 'Film d\'azione', 112, 2022, 5),
+        new Movie('Love & Gelato', 'Brandon Camp', 'Film per adolescenti', 112, 2022, 4),
+        new Movie('Mortal Kombat', 'Simon McQuoid', 'Film di arte marziali', 110, 2021, 3),
+        new Movie('Hustle', 'Jeremiah Zagar', 'Dramma', 118, 2022, 2),
+        new Movie('Spiderhead', 'Joseph Kosinski', 'Film di fantascienza', 107, 2022, 1)
     ];
 ?>
 
@@ -26,11 +26,12 @@
         <?php foreach($movies as $movie) { ?>
             <li>
                 <h3>Titolo: <?= $movie->title; ?></h3>
-                <h5>Regista: <?= $movie->director; ?></h5>
-                <span>Genere: <?= $movie->genre; ?></span>
-                <span>Durata: <?= $movie->duration; ?></span>
-                <span>Anno: <?= $movie->year; ?></span>
-                <span>Valutazione: <?= $movie->discount; ?></span>
+                <span>Regista: <?= $movie->director; ?></span> <br>
+                <span>Genere: <?= $movie->genre; ?></span> <br>
+                <span>Durata: <?= $movie->duration; ?></span> <br>
+                <span>Anno: <?= $movie->year; ?></span> <br>
+                <div>Valutazione: <?= $movie->getStars($movie->stars); ?></div>
+                <hr>
             </li>
         <?php } ?>
     </ul>

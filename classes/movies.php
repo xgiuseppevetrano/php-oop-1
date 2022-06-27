@@ -5,22 +5,23 @@
         public $genre;
         public $duration;
         public $year;
-        private $stars;
+        public $stars;
+        private $htmlStar;
 
-        public function __construct($_title, $_director, $genre, $duration, $year) {
+        public function __construct($_title, $_director, $_genre, $_duration, $_year, $_stars) {
             $this->title = $_title;
             $this->director = $_director;
-            $this->genre = $genre;
-            $this->duration = $duration;
-            $this->year = $year;
-
+            $this->genre = $_genre;
+            $this->duration = $_duration;
+            $this->year = $_year;
+            $this->stars = $_stars;
         }
 
-        public function getStars($star) {
-            for ($i=0; $i < $star; $i++) {
-                $this->stars += "<span><i class='fa-solid fa-star'></i></span>";
+        public function getStars($stars) {
+            for ($i=0; $i < $stars; $i++) {
+                $this->htmlStars += "<span><i class='fa-solid fa-star'></i></span>";
             }
-            return $this->stars;
+            return $this->htmlStars;
         }
     }
 ?>
