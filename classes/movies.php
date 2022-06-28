@@ -1,12 +1,11 @@
 <?php
-    class Movie {
+    class movie {
         public $title;
         public $director;
         public $genre;
         public $duration;
         public $year;
         public $stars;
-        private $htmlStars;
 
         public function __construct($_title, $_director, $_genre, $_duration, $_year, $_stars) {
             $this->title = $_title;
@@ -17,11 +16,12 @@
             $this->stars = $_stars;
         }
 
-        public function getStars($stars) {
-            for ($i=0; $i < $stars; $i++) {
-                $this->htmlStars .= "<span><i class='fa-solid fa-star'></i></span>";
+        public function getStars() {
+            $htmlStars = '';
+            for ($i=0; $i < $this->stars; $i++) {
+                $htmlStars .= "<span><i class='fa-solid fa-star'></i></span>";
             }
-            return $this->htmlStars;
+            return $htmlStars;
         }
     }
 ?>

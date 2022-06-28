@@ -2,11 +2,11 @@
     require_once __DIR__ . '/classes/movies.php';
 
     $movies = [
-        new Movie('The Man From Toronto', 'Patrick Hughes', 'Film d\'azione', 112, 2022, 5),
-        new Movie('Love & Gelato', 'Brandon Camp', 'Film per adolescenti', 112, 2022, 4),
-        new Movie('Mortal Kombat', 'Simon McQuoid', 'Film di arte marziali', 110, 2021, 3),
-        new Movie('Hustle', 'Jeremiah Zagar', 'Dramma', 118, 2022, 2),
-        new Movie('Spiderhead', 'Joseph Kosinski', 'Film di fantascienza', 107, 2022, 1)
+        new movie('The Man From Toronto', 'Patrick Hughes', 'Film d\'azione', 112, 2022, 5),
+        new movie('Love & Gelato', 'Brandon Camp', 'Film per adolescenti', 112, 2022, 4),
+        new movie('Mortal Kombat', 'Simon McQuoid', 'Film di arte marziali', 110, 2021, 3),
+        new movie('Hustle', 'Jeremiah Zagar', 'Dramma', 118, 2022, 2),
+        new movie('Spiderhead', 'Joseph Kosinski', 'Film di fantascienza', 107, 2022, 1)
     ];
 ?>
 
@@ -29,7 +29,7 @@
             <span>Genere: <?= $movie->genre; ?></span> <br>
             <span>Durata: <?= $movie->duration; ?></span> <br>
             <span>Anno: <?= $movie->year; ?></span> <br>
-            <div>Valutazione: <?= $movie->getStars($movie->stars); ?></div>
+            <div>Valutazione: <?= $movie->getStars(); ?></div>
             <hr>
         </div>
     <?php } ?>
